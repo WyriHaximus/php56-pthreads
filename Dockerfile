@@ -27,6 +27,7 @@ RUN apt-get update \
 	&& make \
 	&& make install \
 	&& cp php.ini-production /usr/local/lib/php.ini \
+	&& sed -i "s/^;date.timezone =$/date.timezone = \"UTC\"/" /usr/local/lib/php.ini \
 	&& cd .. \
 	&& pecl config-set php_ini /usr/local/lib/php.ini \
 	&& pear config-set php_ini /usr/local/lib/php.ini \
