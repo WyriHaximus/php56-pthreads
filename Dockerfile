@@ -1,5 +1,5 @@
 FROM debian:jessie
-MAINTAINER Anders Steinlein <anders@e5r.no>
+MAINTAINER Cees-Jan Kiewiet <hi@ceesjankiewiet.nl>
 
 # Install build requirements
 # ...then compile PHP & the pthreads extension
