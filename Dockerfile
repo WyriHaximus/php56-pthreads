@@ -14,9 +14,9 @@ RUN apt-get update \
 		libxml2-dev \
 		wget \
 
-	&& wget -qO php-5.6.10.tar.bz2 http://us1.php.net/get/php-5.6.10.tar.bz2/from/this/mirror \
-	&& tar xjf php-5.6.10.tar.bz2 \
-	&& cd php-5.6.10 \
+	&& wget -qO php-5.6.17.tar.bz2 http://us1.php.net/get/php-5.6.17.tar.bz2/from/this/mirror \
+	&& tar xjf php-5.6.17.tar.bz2 \
+	&& cd php-5.6.17 \
 	&& ./configure \
 		--disable-cgi \
 		--enable-mbstring \
@@ -33,8 +33,8 @@ RUN apt-get update \
 	&& pear config-set php_ini /usr/local/lib/php.ini \
 	&& pecl install pthreads-2.0.10 \
 
-	&& rm php-5.6.10.tar.bz2 \
-	&& rm -rf php-5.6.10 \
+	&& rm php-5.6.1.tar.bz2 \
+	&& rm -rf php-5.6.17 \
 	&& apt-get purge -y autoconf build-essential wget .+-dev \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
